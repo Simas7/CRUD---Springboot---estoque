@@ -1,10 +1,17 @@
-function dados() {
-    fetch('http://localhost:5051/main') 
-      .then(response => response.json()) 
-      .then(cautelas => {
-        console.log(cautelas)
-      })
-      .catch(error => console.error('Erro ao buscar dados:', error));
-  } 
+fetch('http://localhost:5051/main')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Lista de Estoques:', data);
+    })
+    .catch(error => console.error('Erro na requisição:', error));
 
-  console.log(dados())   
+    function enviarRequisicao(url, metodo, dados) {
+      return fetch(url, {
+          method: metodo,
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(dados),
+      })
+      .then(response => response.json());
+  }  

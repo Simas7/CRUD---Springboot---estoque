@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./api.js" defer></script>
     <title>Formulário de Estoque</title>
 </head>
 <body>
@@ -26,7 +25,8 @@
     <button type="button" onclick="enviarFormulario()">Enviar</button>
 </form>
 
-<!-- <script>
+<script src="api.js"></script>
+<script>
     function enviarFormulario() {
         // Obter valores do formulário
         const codigo = document.getElementById('codigo').value;
@@ -50,7 +50,7 @@
             })
             .catch(error => console.error('Erro na requisição:', error));
     }
-</script> -->
+</script>
 
 </body>
 </html>
