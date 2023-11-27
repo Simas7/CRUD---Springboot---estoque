@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./api.js" defer></script>
+    <title>Formulário de Estoque</title>
+</head>
+<body>
+
+<h2>Criar Novo Estoque</h2>
+
+<form id="estoqueForm">
+    <label for="codigo">Código:</label>
+    <input type="number" id="codigo" name="codigo" required>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="preco">Preço:</label>
+    <input type="number" id="preco" name="preco" step="0.01" required>
+
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" name="quantidade" required>
+
+    <button type="button" onclick="enviarFormulario()">Enviar</button>
+</form>
+
+<!-- <script>
+    function enviarFormulario() {
+        // Obter valores do formulário
+        const codigo = document.getElementById('codigo').value;
+        const nome = document.getElementById('nome').value;
+        const preco = document.getElementById('preco').value;
+        const quantidade = document.getElementById('quantidade').value;
+
+        // Criar objeto com os dados do estoque
+        const estoqueData = {
+            Codigo: parseInt(codigo),
+            Nome: nome,
+            Preço: parseFloat(preco),
+            Quantidade: parseInt(quantidade),
+        };
+
+        // Enviar requisição POST usando a função definida em api.js
+        enviarRequisicao('http://localhost:5051/main', 'POST', estoqueData)
+            .then(data => {
+                console.log('Estoque adicionado:', data);
+                // Realizar ações após adicionar o estoque, se necessário
+            })
+            .catch(error => console.error('Erro na requisição:', error));
+    }
+</script> -->
+
+</body>
+</html>

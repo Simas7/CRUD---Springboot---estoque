@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-LojinhaApplication<lojinha>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.estoque.lojinha.LojinhaApplication",
+            "projectName": "lojinha",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
